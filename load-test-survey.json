@@ -1,0 +1,1472 @@
+{
+  "translation_column": [], 
+  "rules": [
+    {
+      "model": "pollster.rule", 
+      "pk": 2685, 
+      "fields": {
+        "rule_type": 5, 
+        "is_sufficient": true, 
+        "subject_question": 1309, 
+        "object_question": 1313, 
+        "subject_options": [
+          6798
+        ], 
+        "object_options": [
+          6806
+        ]
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2686, 
+      "fields": {
+        "rule_type": 5, 
+        "is_sufficient": true, 
+        "subject_question": 1309, 
+        "object_question": 1312, 
+        "subject_options": [
+          6797
+        ], 
+        "object_options": [
+          6803
+        ]
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2687, 
+      "fields": {
+        "rule_type": 1, 
+        "is_sufficient": true, 
+        "subject_question": 1309, 
+        "object_question": 1312, 
+        "subject_options": [
+          6798
+        ], 
+        "object_options": []
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2688, 
+      "fields": {
+        "rule_type": 1, 
+        "is_sufficient": true, 
+        "subject_question": 1309, 
+        "object_question": 1313, 
+        "subject_options": [
+          6797
+        ], 
+        "object_options": []
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2689, 
+      "fields": {
+        "rule_type": 7, 
+        "is_sufficient": true, 
+        "subject_question": 1316, 
+        "object_question": 1309, 
+        "subject_options": [
+          6812
+        ], 
+        "object_options": []
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2690, 
+      "fields": {
+        "rule_type": 1, 
+        "is_sufficient": false, 
+        "subject_question": 1317, 
+        "object_question": 1319, 
+        "subject_options": [
+          6813
+        ], 
+        "object_options": []
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2691, 
+      "fields": {
+        "rule_type": 1, 
+        "is_sufficient": false, 
+        "subject_question": 1318, 
+        "object_question": 1319, 
+        "subject_options": [
+          6815
+        ], 
+        "object_options": []
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2692, 
+      "fields": {
+        "rule_type": 3, 
+        "is_sufficient": true, 
+        "subject_question": 1320, 
+        "object_question": 1320, 
+        "subject_options": [
+          6821
+        ], 
+        "object_options": [
+          6819
+        ]
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2693, 
+      "fields": {
+        "rule_type": 6, 
+        "is_sufficient": true, 
+        "subject_question": 1320, 
+        "object_question": 1318, 
+        "subject_options": [
+          6818
+        ], 
+        "object_options": [
+          6815
+        ]
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2694, 
+      "fields": {
+        "rule_type": 2, 
+        "is_sufficient": true, 
+        "subject_question": 1320, 
+        "object_question": 1321, 
+        "subject_options": [
+          6819
+        ], 
+        "object_options": []
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2695, 
+      "fields": {
+        "rule_type": 4, 
+        "is_sufficient": true, 
+        "subject_question": 1320, 
+        "object_question": 1320, 
+        "subject_options": [
+          6820
+        ], 
+        "object_options": [
+          6819
+        ]
+      }
+    }, 
+    {
+      "model": "pollster.rule", 
+      "pk": 2696, 
+      "fields": {
+        "rule_type": 13, 
+        "is_sufficient": true, 
+        "subject_question": 1322, 
+        "object_question": 1316, 
+        "subject_options": [
+          6823
+        ], 
+        "object_options": [
+          6807, 
+          6809, 
+          6811
+        ]
+      }
+    }
+  ], 
+  "translation_option": [
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12152, 
+      "fields": {
+        "translation": 48, 
+        "option": 6797, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12153, 
+      "fields": {
+        "translation": 48, 
+        "option": 6798, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12154, 
+      "fields": {
+        "translation": 48, 
+        "option": 6799, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12155, 
+      "fields": {
+        "translation": 48, 
+        "option": 6800, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12156, 
+      "fields": {
+        "translation": 48, 
+        "option": 6801, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12157, 
+      "fields": {
+        "translation": 48, 
+        "option": 6802, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12158, 
+      "fields": {
+        "translation": 48, 
+        "option": 6804, 
+        "text": "", 
+        "description": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationoption", 
+      "pk": 12159, 
+      "fields": {
+        "translation": 48, 
+        "option": 6805, 
+        "text": "", 
+        "description": ""
+      }
+    }
+  ], 
+  "translation_questions": [
+    {
+      "model": "pollster.translationquestion", 
+      "pk": 1456, 
+      "fields": {
+        "translation": 48, 
+        "question": 1308, 
+        "title": "", 
+        "description": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationquestion", 
+      "pk": 1457, 
+      "fields": {
+        "translation": 48, 
+        "question": 1309, 
+        "title": "", 
+        "description": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationquestion", 
+      "pk": 1458, 
+      "fields": {
+        "translation": 48, 
+        "question": 1310, 
+        "title": "", 
+        "description": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationquestion", 
+      "pk": 1459, 
+      "fields": {
+        "translation": 48, 
+        "question": 1311, 
+        "title": "", 
+        "description": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationquestion", 
+      "pk": 1460, 
+      "fields": {
+        "translation": 48, 
+        "question": 1312, 
+        "title": "", 
+        "description": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.translationquestion", 
+      "pk": 1461, 
+      "fields": {
+        "translation": 48, 
+        "question": 1313, 
+        "title": "", 
+        "description": "", 
+        "error_message": ""
+      }
+    }
+  ], 
+  "translation_row": [], 
+  "rows": [
+    {
+      "model": "pollster.questionrow", 
+      "pk": 169, 
+      "fields": {
+        "question": 1323, 
+        "ordinal": 1, 
+        "title": "Monday"
+      }
+    }, 
+    {
+      "model": "pollster.questionrow", 
+      "pk": 170, 
+      "fields": {
+        "question": 1323, 
+        "ordinal": 2, 
+        "title": "Tuesday"
+      }
+    }, 
+    {
+      "model": "pollster.questionrow", 
+      "pk": 171, 
+      "fields": {
+        "question": 1323, 
+        "ordinal": 3, 
+        "title": "Wednesday"
+      }
+    }, 
+    {
+      "model": "pollster.questionrow", 
+      "pk": 172, 
+      "fields": {
+        "question": 1324, 
+        "ordinal": 1, 
+        "title": "Monday"
+      }
+    }, 
+    {
+      "model": "pollster.questionrow", 
+      "pk": 173, 
+      "fields": {
+        "question": 1324, 
+        "ordinal": 2, 
+        "title": "Tuesday"
+      }
+    }, 
+    {
+      "model": "pollster.questionrow", 
+      "pk": 174, 
+      "fields": {
+        "question": 1324, 
+        "ordinal": 3, 
+        "title": "Wednesday"
+      }
+    }
+  ], 
+  "survey_translations": [
+    {
+      "model": "pollster.translationsurvey", 
+      "pk": 48, 
+      "fields": {
+        "survey": 39, 
+        "language": "sv", 
+        "title": "", 
+        "status": "PUBLISHED"
+      }
+    }
+  ], 
+  "survey_questions": [
+    {
+      "model": "pollster.question", 
+      "pk": 1308, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 0, 
+        "title": "Compilation Date", 
+        "description": "", 
+        "type": "builtin", 
+        "data_type": 6, 
+        "open_option_data_type": null, 
+        "data_name": "timestamp", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1309, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": true, 
+        "is_mandatory": false, 
+        "ordinal": 2, 
+        "title": "", 
+        "description": "", 
+        "type": "text", 
+        "data_type": 3, 
+        "open_option_data_type": null, 
+        "data_name": "PREFIL_BIRTHYEAR", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1310, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 3, 
+        "title": "Test RegEx", 
+        "description": "[A-C]+", 
+        "type": "text", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestRegEx", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "[A-C]+", 
+        "error_message": "Not ok"
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1311, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 4, 
+        "title": "Singe Choice with numeric open answer", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": 3, 
+        "data_name": "TestSC", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": "Must be a number"
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1312, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": true, 
+        "is_mandatory": true, 
+        "ordinal": 5, 
+        "title": "Only show for children. Mandatory", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "testChild", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1313, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": true, 
+        "is_mandatory": true, 
+        "ordinal": 6, 
+        "title": "Only show for adults. Mandatory", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestAdult", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1314, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 7, 
+        "title": "Test enter date", 
+        "description": "", 
+        "type": "text", 
+        "data_type": 4, 
+        "open_option_data_type": null, 
+        "data_name": "OpenDate", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": "Not correct."
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1315, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 8, 
+        "title": "Test enter number", 
+        "description": "", 
+        "type": "text", 
+        "data_type": 3, 
+        "open_option_data_type": null, 
+        "data_name": "OpenNumeric", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": "Not a number"
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1316, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 9, 
+        "title": "Multiple choice", 
+        "description": "Please enter more than one answer. If you can.", 
+        "type": "multiple-choice", 
+        "data_type": 2, 
+        "open_option_data_type": 2, 
+        "data_name": "TestMC", 
+        "visual": "check", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1317, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 10, 
+        "title": "Answer yes here and the next question", 
+        "description": "To show the question \"Here I am\"", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestSufficient", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1318, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 11, 
+        "title": "Answer yes here and the previous question", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestSuff2", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1319, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": true, 
+        "is_mandatory": false, 
+        "ordinal": 12, 
+        "title": "Here I am!", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestSuff3", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1320, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 13, 
+        "title": "Uncheck test", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "UncheckTest", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1321, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 14, 
+        "title": "To be hidden", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestQ", 
+        "visual": "radio", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1322, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 15, 
+        "title": "", 
+        "description": "", 
+        "type": "single-choice", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestFill", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1323, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 16, 
+        "title": "Test Matrix Select", 
+        "description": "", 
+        "type": "matrix-select", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestMatrixSelect", 
+        "visual": "select", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }, 
+    {
+      "model": "pollster.question", 
+      "pk": 1324, 
+      "fields": {
+        "survey": 39, 
+        "starts_hidden": false, 
+        "is_mandatory": false, 
+        "ordinal": 17, 
+        "title": "What did you eat", 
+        "description": "", 
+        "type": "matrix-entry", 
+        "data_type": 2, 
+        "open_option_data_type": null, 
+        "data_name": "TestMatrixEntries", 
+        "visual": "", 
+        "tags": "", 
+        "regex": "", 
+        "error_message": ""
+      }
+    }
+  ], 
+  "survey": [
+    {
+      "model": "pollster.survey", 
+      "pk": 39, 
+      "fields": {
+        "parent": null, 
+        "title": "test2", 
+        "shortname": "test2", 
+        "version": "", 
+        "created": "2017-06-13T17:30:58", 
+        "updated": "2017-06-29T10:11:33.268", 
+        "status": "UNPUBLISHED"
+      }
+    }
+  ], 
+  "options": [
+    {
+      "model": "pollster.option", 
+      "pk": 6797, 
+      "fields": {
+        "question": 1309, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": true, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "", 
+        "group": "", 
+        "value": "", 
+        "description": "", 
+        "virtual_type": 2, 
+        "virtual_inf": "1900", 
+        "virtual_sup": "2000", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6798, 
+      "fields": {
+        "question": 1309, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": true, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "", 
+        "group": "", 
+        "value": "", 
+        "description": "", 
+        "virtual_type": 2, 
+        "virtual_inf": "2001", 
+        "virtual_sup": "2017", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6799, 
+      "fields": {
+        "question": 1311, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": true, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "something else:", 
+        "group": "", 
+        "value": "S", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6800, 
+      "fields": {
+        "question": 1311, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "No", 
+        "group": "", 
+        "value": "N", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6801, 
+      "fields": {
+        "question": 1312, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Yes", 
+        "group": "", 
+        "value": "Y", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6802, 
+      "fields": {
+        "question": 1312, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "No", 
+        "group": "", 
+        "value": "N", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6803, 
+      "fields": {
+        "question": 1312, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": true, 
+        "ordinal": 3, 
+        "text": "NULL", 
+        "group": "", 
+        "value": "NULL", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6804, 
+      "fields": {
+        "question": 1313, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Yes", 
+        "group": "", 
+        "value": "Y", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6805, 
+      "fields": {
+        "question": 1313, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "No", 
+        "group": "", 
+        "value": "N", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6806, 
+      "fields": {
+        "question": 1313, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": true, 
+        "ordinal": 3, 
+        "text": "NULL", 
+        "group": "", 
+        "value": "NULL", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6807, 
+      "fields": {
+        "question": 1316, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Car", 
+        "group": "", 
+        "value": "C", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6808, 
+      "fields": {
+        "question": 1316, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "Bicycle", 
+        "group": "", 
+        "value": "B", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6809, 
+      "fields": {
+        "question": 1316, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 3, 
+        "text": "Motorbike", 
+        "group": "", 
+        "value": "M", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6810, 
+      "fields": {
+        "question": 1316, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 4, 
+        "text": "Bus", 
+        "group": "", 
+        "value": "BU", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6811, 
+      "fields": {
+        "question": 1316, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 5, 
+        "text": "Train", 
+        "group": "", 
+        "value": "T", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6812, 
+      "fields": {
+        "question": 1316, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 6, 
+        "text": "Non of the above. (Exclusive)", 
+        "group": "", 
+        "value": "E", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6813, 
+      "fields": {
+        "question": 1317, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Yes", 
+        "group": "", 
+        "value": "Y", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6814, 
+      "fields": {
+        "question": 1317, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "No", 
+        "group": "", 
+        "value": "N", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6815, 
+      "fields": {
+        "question": 1318, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Yes", 
+        "group": "", 
+        "value": "Y", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6816, 
+      "fields": {
+        "question": 1318, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "No", 
+        "group": "", 
+        "value": "N", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6817, 
+      "fields": {
+        "question": 1319, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": true, 
+        "ordinal": 1, 
+        "text": "NULL", 
+        "group": "", 
+        "value": "NULL", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6818, 
+      "fields": {
+        "question": 1320, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Uncheck Yes from \"previous\"", 
+        "group": "", 
+        "value": "UNC", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6819, 
+      "fields": {
+        "question": 1320, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "Hide \"Here I am!\"", 
+        "group": "", 
+        "value": "HIDE", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6820, 
+      "fields": {
+        "question": 1320, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 3, 
+        "text": "Remove option \"Hide \"Here I am!\"\"", 
+        "group": "", 
+        "value": "REMOPT", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6821, 
+      "fields": {
+        "question": 1320, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 4, 
+        "text": "Get option \"Hide \"Here I am!\" back", 
+        "group": "", 
+        "value": "SHOWOPT", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 7090, 
+      "fields": {
+        "question": 1320, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 5, 
+        "text": "Check option Yes from \"previous\"", 
+        "group": "", 
+        "value": "CHECK", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6822, 
+      "fields": {
+        "question": 1321, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "To be hidden", 
+        "group": "", 
+        "value": "T", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6823, 
+      "fields": {
+        "question": 1322, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Fill rule on Multiple Select", 
+        "group": "", 
+        "value": "FILL", 
+        "description": "Not clear what this should do :-)", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6824, 
+      "fields": {
+        "question": 1323, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 1, 
+        "text": "Yes", 
+        "group": "", 
+        "value": "Y", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }, 
+    {
+      "model": "pollster.option", 
+      "pk": 6825, 
+      "fields": {
+        "question": 1323, 
+        "clone": null, 
+        "row": null, 
+        "column": null, 
+        "is_virtual": false, 
+        "is_open": false, 
+        "starts_hidden": false, 
+        "ordinal": 2, 
+        "text": "No", 
+        "group": "", 
+        "value": "N", 
+        "description": "", 
+        "virtual_type": null, 
+        "virtual_inf": "", 
+        "virtual_sup": "", 
+        "virtual_regex": ""
+      }
+    }
+  ], 
+  "columns": [
+    {
+      "model": "pollster.questioncolumn", 
+      "pk": 39, 
+      "fields": {
+        "question": 1323, 
+        "ordinal": 1, 
+        "title": "Boat"
+      }
+    }, 
+    {
+      "model": "pollster.questioncolumn", 
+      "pk": 40, 
+      "fields": {
+        "question": 1323, 
+        "ordinal": 2, 
+        "title": "Car"
+      }
+    }, 
+    {
+      "model": "pollster.questioncolumn", 
+      "pk": 41, 
+      "fields": {
+        "question": 1323, 
+        "ordinal": 3, 
+        "title": "Train"
+      }
+    }, 
+    {
+      "model": "pollster.questioncolumn", 
+      "pk": 42, 
+      "fields": {
+        "question": 1324, 
+        "ordinal": 1, 
+        "title": "Eat"
+      }
+    }, 
+    {
+      "model": "pollster.questioncolumn", 
+      "pk": 43, 
+      "fields": {
+        "question": 1324, 
+        "ordinal": 2, 
+        "title": "Drink"
+      }
+    }
+  ]
+}
