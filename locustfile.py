@@ -1,10 +1,11 @@
 from urlparse import urlparse, parse_qs
+from random import choice
 
 from locust import HttpLocust, TaskSet, task
 from locust.exception import StopLocust
 from pyquery import PyQuery
 
-NUM_USERS = 1
+NUM_USERS = 50
 
 users = ['test{0}'.format(i) for i in range(NUM_USERS)]
 
@@ -23,6 +24,7 @@ class SurveyTask(TaskSet):
             '/accounts/login/',
             name='Login form load'
         )
+
         csrf_token = response.cookies['csrftoken']
 
         login_response = self.client.post(
@@ -38,12 +40,20 @@ class SurveyTask(TaskSet):
         query_string = urlparse(login_response.url).query
         self.client.gid = parse_qs(query_string)['gid'][0]
 
-        survey_response = self.client.get(
-            '/survey/show/test2/?gid='+self.client.gid,
-            name='Survey load'
-        )
+        self.load_survey()
 
-        self.token = survey_response.cookies['csrftoken']
+    @task(5)
+    def load_survey(self):
+        with self.client.get(
+            '/survey/show/test2/?gid='+self.client.gid,
+            name='Survey load',
+            capture=True
+        ) as survey_response:
+
+            if 'csrftoken' not in survey_response.cookies:
+                print(survey_response.status_code)
+
+            self.token = survey_response.cookies['csrftoken']
 
     @task(20)
     def save_draft(self):
@@ -69,7 +79,7 @@ class SurveyTask(TaskSet):
             name='Survey draft save'
         )
 
-    @task(1)
+    # @task(1)
     def submit_survey(self):
         global remaining_users
         response = self.client.post(
@@ -109,6 +119,37 @@ class SurveyTask(TaskSet):
             print('Remaining users: {0}'.format(remaining_users))
 
         self.interrupt(reschedule=False)
+
+class LoginUser(TaskSet):
+    @task(1)
+    def login(self):
+        username = choice(users)
+        response = self.client.get(
+            '/accounts/login/',
+            name='Login form load'
+        )
+        csrf_token = response.cookies['csrftoken']
+
+        with self.client.post(
+            '/accounts/login/',
+            {
+                'username': username,
+                'password': 'password',
+                'csrfmiddlewaretoken': csrf_token
+            },
+            name='Login form submit',
+            catch_response=True
+        ) as login_response:
+
+            if not '/sv/valkommen' in login_response.url:
+                print('BOOM')
+                login_response.failure('Double login!')
+
+
+    @task(1)
+    def logout(self):
+        self.client.get('/accounts/logout/')
+        self.history.append('logout')
 
 
 class WebsiteUser(HttpLocust):
