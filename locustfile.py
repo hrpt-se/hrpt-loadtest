@@ -43,12 +43,12 @@ class SurveyTask(TaskSequence):
             '/accounts/login/',
             name='Login form load'
         )
-        print(response.cookies)
+        # print(response.cookies)
         self.token = response.cookies['csrftoken']
         # Get the csrfmiddlewaretoken from the HMTL response
         soup = BeautifulSoup(response.content, features="lxml")
         self.mwtoken = soup.find('input', {'name':'csrfmiddlewaretoken'}).get('value')
-        print(self.mwtoken)
+        # print(self.mwtoken)
         # TODO: remove after test
         # import pdb;
         # pdb.set_trace()
@@ -66,8 +66,8 @@ class SurveyTask(TaskSequence):
         # query_string = urlparse(login_response.url).query
         # print("query_string:" + query_string)
         # self.sessionid = login_response.cookies['sessionid']
-        print(login_response.is_redirect)
-        print(login_response.content)
+        # print(login_response.is_redirect)
+        # print(login_response.content)
         try:
             self.sessionid = login_response.cookies['sessionid']
         except KeyError:
