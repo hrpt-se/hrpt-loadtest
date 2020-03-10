@@ -7,11 +7,11 @@
 from urllib.parse import urlparse, parse_qs
 from random import choice
 
-from locust import HttpLocust, TaskSet, task, between
+from locust import HttpLocust, TaskSet, TaskSequence, task, between, seq_task
 from locust.exception import StopLocust
 from pyquery import PyQuery
 from bs4 import BeautifulSoup
-
+from random import randint
 
 NUM_USERS = 10
 
@@ -20,19 +20,21 @@ users = ['test{0}'.format(i) for i in range(0, NUM_USERS)]
 remaining_users = len(users)
 
 
-class SurveyTask(TaskSet):
+class SurveyTask(TaskSequence):
     def __init__(self, parent):
         super().__init__(parent)
         self.token = ''
         self.sessionid = ''
         self.mwtoken = ''
 
-    def on_start(self):
+    @seq_task(1)
+    def login(self):
         try:
             username = users.pop()
         except IndexError:
             print('no avaliable user, continuing')
-            self.interrupt(reschedule=False)
+            raise StopLocust
+            # self.interrupt(reschedule=False)
         # TODO: remove after test
         # pydevd_pycharm.settrace('localhost', port=12345, stdoutToServer=True, stderrToServer=True)
         # Remove above
@@ -78,7 +80,7 @@ class SurveyTask(TaskSet):
 
         self.load_survey()
 
-    @task(5)
+    @seq_task(2)
     def load_survey(self):
         with self.client.get(
             '/survey/show/test2/',
@@ -96,10 +98,11 @@ class SurveyTask(TaskSet):
                 print('No csrftoken cookie')
             # self.sessionid = survey_response.cookies['sessionid']
 
+    @seq_task(3)
     @task(20)
     def save_draft(self):
-        print('SaveDraft_sessionid:', self.sessionid)
-        print('SaveDraft_token:', self.token)
+        # print('SaveDraft_sessionid:', self.sessionid)
+        # print('SaveDraft_token:', self.token)
         response = self.client.post(
             '/survey/show/test2/?draft=save',
             # data={"csrfmiddlewaretoken": self.token},
@@ -111,7 +114,7 @@ class SurveyTask(TaskSet):
                     "TestRegEx": "",
                     "testChild": "NULL",
                     "OpenDate": "",
-                    "OpenNumeric": "",
+                    "OpenNumeric": str(randint(1, 999)),
                     "TestMatrixEntries_multi_row1_col1": "",
                     "TestMatrixEntries_multi_row1_col2": "",
                     "TestMatrixEntries_multi_row2_col1": "",
@@ -123,11 +126,17 @@ class SurveyTask(TaskSet):
             cookies={'csrftoken': self.token, 'sessionid': self.sessionid},
             name='Survey draft save'
         )
-        print('Save draft cookies: ', response.cookies)
-        print('Save draft response: ', response)
-        # self.token = response.cookies['csrftoken']
+        if 'csrftoken' not in response.cookies:
+            print(response.status_code)
+        try:
+            self.token = response.cookies['csrftoken']
+        except KeyError:
+            print('No csrftoken cookie')
+        # print('Save draft cookies: ', response.cookies)
+        # print('Save draft response: ', response)
 
-    @task(5)
+    @seq_task(4)
+    @task(1)
     def submit_survey(self):
         global remaining_users
         response = self.client.post(
@@ -135,12 +144,13 @@ class SurveyTask(TaskSet):
             data={
                 'csrfmiddlewaretoken': self.token,
                 'PREFIL_BIRTHYEAR': '1950',
-                'TestRegEx': '',
-                'TestSC': 'N',
+                'TestRegEx': 'A',
+                'TestSC': 'S',
+                'TestSC_S_open' : '34',
                 'testChild': 'NULL',
                 'TestAdult': 'Y',
-                'OpenDate': '22/08/2017',
-                'OpenNumeric': '765',
+                'OpenDate': str(randint(1, 28)) + '/08/2017',
+                'OpenNumeric': str(randint(1, 790)),
                 'TestMC_B': '1',
                 'TestMC_M': '1',
                 'TestSufficient': 'Y',
@@ -155,7 +165,7 @@ class SurveyTask(TaskSet):
                 'TestMatrixEntries_multi_row3_col1': '',
                 'TestMatrixEntries_multi_row3_col2': ''
             },
-            cookies={'crftoken': self.token, 'sessionid': self.sessionid},
+            cookies={'crftoken': self.token, 'sessionid': self.sessionid, 'django_language': 'sv'},
             name='Survey submit'
         )
 
@@ -169,39 +179,49 @@ class SurveyTask(TaskSet):
 
         # self.interrupt(reschedule=False)
 
-class LoginUser(TaskSet):
-    @task(1)
-    def login(self):
-        username = choice(users)
-        response = self.client.get(
-            '/accounts/login/',
-            name='Login form load'
-        )
-        csrf_token = response.cookies['csrftoken']
-
-        with self.client.post(
-            '/accounts/login/',
-            {
-                'username': username,
-                'password': 'password',
-                'csrfmiddlewaretoken': csrf_token
-            },
-            name='Login form submit',
-            catch_response=True
-        ) as login_response:
-
-            if not '/sv/valkommen' in login_response.url:
-                print('BOOM')
-                login_response.failure('Double login!')
-            print(login_response.cookies)
-            self.sessionid = login_response.cookies['sessionid']
-            self.token = login_response.cookies['csrftoken']
-
-
+    @seq_task(5)
     @task(1)
     def logout(self):
-        self.client.get('/accounts/logout/')
-        self.history.append('logout')
+        self.client.get('/accounts/logout/',
+            cookies={'csrftoken': self.token, 'sessionid': self.sessionid},
+            allow_redirects=False,
+            name='User logout'
+        )
+        # self.interrupt()
+
+# class LoginUser(TaskSet):
+#     @task(1)
+#     def login(self):
+#         username = choice(users)
+#         response = self.client.get(
+#             '/accounts/login/',
+#             name='Login form load'
+#         )
+#         csrf_token = response.cookies['csrftoken']
+#
+#         with self.client.post(
+#             '/accounts/login/',
+#             {
+#                 'username': username,
+#                 'password': 'password',
+#                 'csrfmiddlewaretoken': csrf_token
+#             },
+#             name='Login form submit',
+#             catch_response=True
+#         ) as login_response:
+#
+#             if not '/sv/valkommen' in login_response.url:
+#                 print('BOOM')
+#                 login_response.failure('Double login!')
+#             print(login_response.cookies)
+#             self.sessionid = login_response.cookies['sessionid']
+#             self.token = login_response.cookies['csrftoken']
+#
+#
+#     @task(1)
+#     def logout(self):
+#         self.client.get('/accounts/logout/')
+#         self.history.append('logout')
 
 
 class WebsiteUser(HttpLocust):
