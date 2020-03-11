@@ -13,7 +13,7 @@ from pyquery import PyQuery
 from bs4 import BeautifulSoup
 from random import randint
 
-NUM_USERS = 10
+NUM_USERS = 540
 
 users = ['test{0}'.format(i) for i in range(0, NUM_USERS)]
 
@@ -47,14 +47,14 @@ class SurveyTask(TaskSequence):
         self.token = response.cookies['csrftoken']
         # Get the csrfmiddlewaretoken from the HMTL response
         soup = BeautifulSoup(response.content, features="lxml")
-        self.mwtoken = soup.find('input', {'name':'csrfmiddlewaretoken'}).get('value')
-        # print(self.mwtoken)
+        self.mwtoken = soup.find('input', {'name': 'csrfmiddlewaretoken'}).get('value')
+        # print('MiddleWareToken: ' + self.mwtoken)
         # TODO: remove after test
         # import pdb;
         # pdb.set_trace()
         login_response = self.client.post(
             '/accounts/login/',
-            headers={'X-CSRFToken': self.token},
+            # headers={'X-CSRFToken': self.token},
             data={"csrfmiddlewaretoken": self.mwtoken,
                 'username': username,
                 'password': 'password'},
@@ -67,7 +67,8 @@ class SurveyTask(TaskSequence):
         # print("query_string:" + query_string)
         # self.sessionid = login_response.cookies['sessionid']
         # print(login_response.is_redirect)
-        # print(login_response.content)
+        # print('login_response.status_code: \n' + str(login_response.status_code))
+        # print('login_response.content: \n' + login_response.content.decode("utf-8"))
         try:
             self.sessionid = login_response.cookies['sessionid']
         except KeyError:
@@ -77,8 +78,16 @@ class SurveyTask(TaskSequence):
         except KeyError:
             print('No csrftoken cookie')
         # self.client.gid = parse_qs(query_string)['gid'][0]
-
-        self.load_survey()
+        response = self.client.get(
+            '/sv/valkommen/',
+            # capture=True,
+            cookies={'csrftoken': self.token, 'sessionid': self.sessionid},
+            allow_redirects=False,
+            name='Load Survey Overview',
+        )
+        if response.status_code != 200:
+            print("Load Survey Overview status exit: " + str(response.status_code))
+        # self.load_survey()
 
     @seq_task(2)
     def load_survey(self):
@@ -97,6 +106,8 @@ class SurveyTask(TaskSequence):
             except KeyError:
                 print('No csrftoken cookie')
             # self.sessionid = survey_response.cookies['sessionid']
+        # print('survey_response.status_code: \n' + str(survey_response.status_code))
+        # print('survey_response.content: \n' + survey_response.content.decode("utf-8"))
 
     @seq_task(3)
     @task(20)
@@ -184,7 +195,7 @@ class SurveyTask(TaskSequence):
     def logout(self):
         self.client.get('/accounts/logout/',
             cookies={'csrftoken': self.token, 'sessionid': self.sessionid},
-            allow_redirects=False,
+            allow_redirects=True,
             name='User logout'
         )
         # self.interrupt()
