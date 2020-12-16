@@ -1,7 +1,9 @@
 from random import randint
 
-SURVEY_ID = 6
-SURVEY_URL = "/survey/show/test2/"
+# Staging: 300
+# Prod: 296
+SURVEY_ID = 296
+SURVEY_URL = "/survey/show/load_test/"
 DRAFT_URL = SURVEY_URL + "?draft=save"
 
 
