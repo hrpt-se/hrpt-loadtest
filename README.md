@@ -21,6 +21,9 @@ In `locustfile.py`:
   * `min_wait` The minimum time between two requests for a simulated users
   * `max_wait` The maximum time between two requests for a simulated users
   
+In `common/survey.py`:
+  * `SURVEY_ID` The ID the included survey gets when imported
+  
 In the load testing tool:
   * `clients` The number of clients running concurrently
   * `hatch_rate` The number of new simulated users that should connect per second.
